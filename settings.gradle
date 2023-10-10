@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+
+        flatDir {
+            dirs 'libs'
+        }
+        //Anythink(Core)
+        maven {
+            url "https://jfrog.anythinktech.com:443/artifactory/android_sdk/"
+        }
+
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Spin And Win"
+include ':app'
+include ':release_folder20231009215624'

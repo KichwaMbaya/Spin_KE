@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:id="@+id/native_ad_image" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:scaleType="fitCenter" android:layout_alignParentBottom="true"/>
+    <TextView android:textColor="#ffffff" android:gravity="center" android:id="@+id/native_ad_install_btn" android:background="#2095f1" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignTop="@+id/native_ad_image" android:layout_alignBottom="@+id/native_ad_image" android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/native_ad_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/native_ad_image"
+        android:layout_toLeftOf="@+id/native_ad_install_btn"
+        android:layout_toRightOf="@+id/native_ad_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/native_ad_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/native_ad_image"
+        android:layout_toLeftOf="@+id/native_ad_install_btn"
+        android:layout_toRightOf="@+id/native_ad_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#777777"
+        android:textSize="12dp" />
+
+    <FrameLayout
+        android:id="@+id/native_ad_content_image_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/native_ad_image" />
+
+    <ImageView android:id="@+id/native_self_adlogo"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/topon_ad_logo"/>
+
+    <com.anythink.nativead.api.ATNativeImageView
+        android:id="@+id/native_ad_logo"
+        android:visibility="gone"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        tools:ignore="MissingClass" />
+
+    <TextView android:textSize="6dp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/native_ad_from"
+        android:background="#888888"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@+id/native_self_adlogo"
+        android:layout_alignTop="@+id/native_ad_logo"/>
+
+</RelativeLayout>
